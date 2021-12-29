@@ -27,24 +27,24 @@ Partial Class frmMain
         Me.พมพQRCODEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.เพมวคซนMultiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.สแกนQRCODEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AuthenCodeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ขอAuthenCodeเทานนToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ขอAuthenCodeลงทะเบยนToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ตรวจสอบAuthenCodeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.รายงานหองLabToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.รายงานการสงตรวจATKToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.รายงานการสงตรวจPCRToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.รายงานศนยPCRToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.รายงานการตรวจPCRToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.รายงานศนยเคลมToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.รายงานการขอAuthenCOdeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.รายงานการสงตรวจATKFIAPCRToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.แบบท2ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.พมพQRCODEToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.พมพใบสรปตดซองToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.พมพใยสรปรวมToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.พมพใบรบรองแพทยToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.รายงานศนยPCRToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.รายงานการตรวจPCRToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ผพฒนาToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.รายงานศนยเคลมToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.รายงานการขอAuthenCOdeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.รายงานการสงตรวจATKFIAPCRToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.รายงานหองLabToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.รายงานการสงตรวจATKToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.รายงานการสงตรวจPCRToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AuthenCodeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ขอAuthenCodeเทานนToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ขอAuthenCodeลงทะเบยนToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ตรวจสอบAuthenCodeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -82,94 +82,6 @@ Partial Class frmMain
         Me.สแกนQRCODEToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
         Me.สแกนQRCODEToolStripMenuItem.Text = "สแกน QRCODE"
         '
-        'แบบท2ToolStripMenuItem
-        '
-        Me.แบบท2ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.พมพQRCODEToolStripMenuItem1, Me.พมพใบสรปตดซองToolStripMenuItem, Me.พมพใยสรปรวมToolStripMenuItem, Me.พมพใบรบรองแพทยToolStripMenuItem})
-        Me.แบบท2ToolStripMenuItem.Name = "แบบท2ToolStripMenuItem"
-        Me.แบบท2ToolStripMenuItem.Size = New System.Drawing.Size(42, 20)
-        Me.แบบท2ToolStripMenuItem.Text = "พิมพ์"
-        '
-        'พมพQRCODEToolStripMenuItem1
-        '
-        Me.พมพQRCODEToolStripMenuItem1.Name = "พมพQRCODEToolStripMenuItem1"
-        Me.พมพQRCODEToolStripMenuItem1.Size = New System.Drawing.Size(166, 22)
-        Me.พมพQRCODEToolStripMenuItem1.Text = "พิมพ์ QRCODE"
-        '
-        'พมพใบสรปตดซองToolStripMenuItem
-        '
-        Me.พมพใบสรปตดซองToolStripMenuItem.Name = "พมพใบสรปตดซองToolStripMenuItem"
-        Me.พมพใบสรปตดซองToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
-        Me.พมพใบสรปตดซองToolStripMenuItem.Text = "พิมพ์ใบสรุปติดซอง"
-        '
-        'พมพใยสรปรวมToolStripMenuItem
-        '
-        Me.พมพใยสรปรวมToolStripMenuItem.Name = "พมพใยสรปรวมToolStripMenuItem"
-        Me.พมพใยสรปรวมToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
-        Me.พมพใยสรปรวมToolStripMenuItem.Text = "พิมพ์ใยสรุปรวม"
-        '
-        'พมพใบรบรองแพทยToolStripMenuItem
-        '
-        Me.พมพใบรบรองแพทยToolStripMenuItem.Name = "พมพใบรบรองแพทยToolStripMenuItem"
-        Me.พมพใบรบรองแพทยToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
-        Me.พมพใบรบรองแพทยToolStripMenuItem.Text = "พิมพ์ใบรับรองแพทย์"
-        '
-        'รายงานศนยPCRToolStripMenuItem
-        '
-        Me.รายงานศนยPCRToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.รายงานการตรวจPCRToolStripMenuItem})
-        Me.รายงานศนยPCRToolStripMenuItem.Name = "รายงานศนยPCRToolStripMenuItem"
-        Me.รายงานศนยPCRToolStripMenuItem.Size = New System.Drawing.Size(97, 20)
-        Me.รายงานศนยPCRToolStripMenuItem.Text = "รายงานศูนย์ PCR"
-        '
-        'รายงานการตรวจPCRToolStripMenuItem
-        '
-        Me.รายงานการตรวจPCRToolStripMenuItem.Name = "รายงานการตรวจPCRToolStripMenuItem"
-        Me.รายงานการตรวจPCRToolStripMenuItem.Size = New System.Drawing.Size(215, 22)
-        Me.รายงานการตรวจPCRToolStripMenuItem.Text = "รายงานการตรวจ ATK FIA PCR"
-        '
-        'ผพฒนาToolStripMenuItem
-        '
-        Me.ผพฒนาToolStripMenuItem.Name = "ผพฒนาToolStripMenuItem"
-        Me.ผพฒนาToolStripMenuItem.Size = New System.Drawing.Size(56, 20)
-        Me.ผพฒนาToolStripMenuItem.Text = "ผู้พัฒนา"
-        '
-        'รายงานศนยเคลมToolStripMenuItem
-        '
-        Me.รายงานศนยเคลมToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.รายงานการขอAuthenCOdeToolStripMenuItem, Me.รายงานการสงตรวจATKFIAPCRToolStripMenuItem})
-        Me.รายงานศนยเคลมToolStripMenuItem.Name = "รายงานศนยเคลมToolStripMenuItem"
-        Me.รายงานศนยเคลมToolStripMenuItem.Size = New System.Drawing.Size(95, 20)
-        Me.รายงานศนยเคลมToolStripMenuItem.Text = "รายงานศูนย์เคลม"
-        '
-        'รายงานการขอAuthenCOdeToolStripMenuItem
-        '
-        Me.รายงานการขอAuthenCOdeToolStripMenuItem.Name = "รายงานการขอAuthenCOdeToolStripMenuItem"
-        Me.รายงานการขอAuthenCOdeToolStripMenuItem.Size = New System.Drawing.Size(207, 22)
-        Me.รายงานการขอAuthenCOdeToolStripMenuItem.Text = "รายงานการขอ AuthenCode"
-        '
-        'รายงานการสงตรวจATKFIAPCRToolStripMenuItem
-        '
-        Me.รายงานการสงตรวจATKFIAPCRToolStripMenuItem.Name = "รายงานการสงตรวจATKFIAPCRToolStripMenuItem"
-        Me.รายงานการสงตรวจATKFIAPCRToolStripMenuItem.Size = New System.Drawing.Size(226, 22)
-        Me.รายงานการสงตรวจATKFIAPCRToolStripMenuItem.Text = "รายงานการส่งตรวจ ATK FIA PCR"
-        '
-        'รายงานหองLabToolStripMenuItem
-        '
-        Me.รายงานหองLabToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.รายงานการสงตรวจATKToolStripMenuItem, Me.รายงานการสงตรวจPCRToolStripMenuItem})
-        Me.รายงานหองLabToolStripMenuItem.Name = "รายงานหองLabToolStripMenuItem"
-        Me.รายงานหองLabToolStripMenuItem.Size = New System.Drawing.Size(89, 20)
-        Me.รายงานหองLabToolStripMenuItem.Text = "รายงานห้องLab"
-        '
-        'รายงานการสงตรวจATKToolStripMenuItem
-        '
-        Me.รายงานการสงตรวจATKToolStripMenuItem.Name = "รายงานการสงตรวจATKToolStripMenuItem"
-        Me.รายงานการสงตรวจATKToolStripMenuItem.Size = New System.Drawing.Size(183, 22)
-        Me.รายงานการสงตรวจATKToolStripMenuItem.Text = "รายงานการส่งตรวจ ATK"
-        '
-        'รายงานการสงตรวจPCRToolStripMenuItem
-        '
-        Me.รายงานการสงตรวจPCRToolStripMenuItem.Name = "รายงานการสงตรวจPCRToolStripMenuItem"
-        Me.รายงานการสงตรวจPCRToolStripMenuItem.Size = New System.Drawing.Size(183, 22)
-        Me.รายงานการสงตรวจPCRToolStripMenuItem.Text = "รายงานการส่งตรวจ PCR"
-        '
         'AuthenCodeToolStripMenuItem
         '
         Me.AuthenCodeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ขอAuthenCodeเทานนToolStripMenuItem, Me.ขอAuthenCodeลงทะเบยนToolStripMenuItem, Me.ตรวจสอบAuthenCodeToolStripMenuItem})
@@ -194,6 +106,94 @@ Partial Class frmMain
         Me.ตรวจสอบAuthenCodeToolStripMenuItem.Name = "ตรวจสอบAuthenCodeToolStripMenuItem"
         Me.ตรวจสอบAuthenCodeToolStripMenuItem.Size = New System.Drawing.Size(208, 22)
         Me.ตรวจสอบAuthenCodeToolStripMenuItem.Text = "ตรวจสอบ Authen Code"
+        '
+        'รายงานหองLabToolStripMenuItem
+        '
+        Me.รายงานหองLabToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.รายงานการสงตรวจATKToolStripMenuItem, Me.รายงานการสงตรวจPCRToolStripMenuItem})
+        Me.รายงานหองLabToolStripMenuItem.Name = "รายงานหองLabToolStripMenuItem"
+        Me.รายงานหองLabToolStripMenuItem.Size = New System.Drawing.Size(89, 20)
+        Me.รายงานหองLabToolStripMenuItem.Text = "รายงานห้องLab"
+        '
+        'รายงานการสงตรวจATKToolStripMenuItem
+        '
+        Me.รายงานการสงตรวจATKToolStripMenuItem.Name = "รายงานการสงตรวจATKToolStripMenuItem"
+        Me.รายงานการสงตรวจATKToolStripMenuItem.Size = New System.Drawing.Size(183, 22)
+        Me.รายงานการสงตรวจATKToolStripMenuItem.Text = "รายงานการส่งตรวจ ATK"
+        '
+        'รายงานการสงตรวจPCRToolStripMenuItem
+        '
+        Me.รายงานการสงตรวจPCRToolStripMenuItem.Name = "รายงานการสงตรวจPCRToolStripMenuItem"
+        Me.รายงานการสงตรวจPCRToolStripMenuItem.Size = New System.Drawing.Size(183, 22)
+        Me.รายงานการสงตรวจPCRToolStripMenuItem.Text = "รายงานการส่งตรวจ PCR"
+        '
+        'รายงานศนยPCRToolStripMenuItem
+        '
+        Me.รายงานศนยPCRToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.รายงานการตรวจPCRToolStripMenuItem})
+        Me.รายงานศนยPCRToolStripMenuItem.Name = "รายงานศนยPCRToolStripMenuItem"
+        Me.รายงานศนยPCRToolStripMenuItem.Size = New System.Drawing.Size(97, 20)
+        Me.รายงานศนยPCRToolStripMenuItem.Text = "รายงานศูนย์ PCR"
+        '
+        'รายงานการตรวจPCRToolStripMenuItem
+        '
+        Me.รายงานการตรวจPCRToolStripMenuItem.Name = "รายงานการตรวจPCRToolStripMenuItem"
+        Me.รายงานการตรวจPCRToolStripMenuItem.Size = New System.Drawing.Size(215, 22)
+        Me.รายงานการตรวจPCRToolStripMenuItem.Text = "รายงานการตรวจ ATK FIA PCR"
+        '
+        'รายงานศนยเคลมToolStripMenuItem
+        '
+        Me.รายงานศนยเคลมToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.รายงานการขอAuthenCOdeToolStripMenuItem, Me.รายงานการสงตรวจATKFIAPCRToolStripMenuItem})
+        Me.รายงานศนยเคลมToolStripMenuItem.Name = "รายงานศนยเคลมToolStripMenuItem"
+        Me.รายงานศนยเคลมToolStripMenuItem.Size = New System.Drawing.Size(95, 20)
+        Me.รายงานศนยเคลมToolStripMenuItem.Text = "รายงานศูนย์เคลม"
+        '
+        'รายงานการขอAuthenCOdeToolStripMenuItem
+        '
+        Me.รายงานการขอAuthenCOdeToolStripMenuItem.Name = "รายงานการขอAuthenCOdeToolStripMenuItem"
+        Me.รายงานการขอAuthenCOdeToolStripMenuItem.Size = New System.Drawing.Size(226, 22)
+        Me.รายงานการขอAuthenCOdeToolStripMenuItem.Text = "รายงานการขอ AuthenCode"
+        '
+        'รายงานการสงตรวจATKFIAPCRToolStripMenuItem
+        '
+        Me.รายงานการสงตรวจATKFIAPCRToolStripMenuItem.Name = "รายงานการสงตรวจATKFIAPCRToolStripMenuItem"
+        Me.รายงานการสงตรวจATKFIAPCRToolStripMenuItem.Size = New System.Drawing.Size(226, 22)
+        Me.รายงานการสงตรวจATKFIAPCRToolStripMenuItem.Text = "รายงานการส่งตรวจ ATK FIA PCR"
+        '
+        'แบบท2ToolStripMenuItem
+        '
+        Me.แบบท2ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.พมพQRCODEToolStripMenuItem1, Me.พมพใบสรปตดซองToolStripMenuItem, Me.พมพใยสรปรวมToolStripMenuItem, Me.พมพใบรบรองแพทยToolStripMenuItem})
+        Me.แบบท2ToolStripMenuItem.Name = "แบบท2ToolStripMenuItem"
+        Me.แบบท2ToolStripMenuItem.Size = New System.Drawing.Size(42, 20)
+        Me.แบบท2ToolStripMenuItem.Text = "พิมพ์"
+        '
+        'พมพQRCODEToolStripMenuItem1
+        '
+        Me.พมพQRCODEToolStripMenuItem1.Name = "พมพQRCODEToolStripMenuItem1"
+        Me.พมพQRCODEToolStripMenuItem1.Size = New System.Drawing.Size(164, 22)
+        Me.พมพQRCODEToolStripMenuItem1.Text = "พิมพ์ QRCODE"
+        '
+        'พมพใบสรปตดซองToolStripMenuItem
+        '
+        Me.พมพใบสรปตดซองToolStripMenuItem.Name = "พมพใบสรปตดซองToolStripMenuItem"
+        Me.พมพใบสรปตดซองToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.พมพใบสรปตดซองToolStripMenuItem.Text = "พิมพ์ใบสรุปติดซอง"
+        '
+        'พมพใยสรปรวมToolStripMenuItem
+        '
+        Me.พมพใยสรปรวมToolStripMenuItem.Name = "พมพใยสรปรวมToolStripMenuItem"
+        Me.พมพใยสรปรวมToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.พมพใยสรปรวมToolStripMenuItem.Text = "พิมพ์ใยสรุปรวม"
+        '
+        'พมพใบรบรองแพทยToolStripMenuItem
+        '
+        Me.พมพใบรบรองแพทยToolStripMenuItem.Name = "พมพใบรบรองแพทยToolStripMenuItem"
+        Me.พมพใบรบรองแพทยToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.พมพใบรบรองแพทยToolStripMenuItem.Text = "พิมพ์ใบรับรองแพทย์"
+        '
+        'ผพฒนาToolStripMenuItem
+        '
+        Me.ผพฒนาToolStripMenuItem.Name = "ผพฒนาToolStripMenuItem"
+        Me.ผพฒนาToolStripMenuItem.Size = New System.Drawing.Size(56, 20)
+        Me.ผพฒนาToolStripMenuItem.Text = "ผู้พัฒนา"
         '
         'frmMain
         '

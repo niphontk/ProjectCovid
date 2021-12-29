@@ -147,6 +147,12 @@
     <Compile Include="frmReportATK.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmReportAuthen.Designer.vb">
+      <DependentUpon>frmReportAuthen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportAuthen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmReportFIA.Designer.vb">
       <DependentUpon>frmReportFIA.vb</DependentUpon>
     </Compile>
@@ -221,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmReportATK.resx">
       <DependentUpon>frmReportATK.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportAuthen.resx">
+      <DependentUpon>frmReportAuthen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReportFIA.resx">
       <DependentUpon>frmReportFIA.vb</DependentUpon>

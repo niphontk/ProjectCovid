@@ -162,4 +162,16 @@
         f.WindowState = FormWindowState.Maximized
         f.Show()
     End Sub
+
+    Private Sub รายงานการขอAuthenCOdeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles รายงานการขอAuthenCOdeToolStripMenuItem.Click
+        Dim frm As Form
+        For Each frm In Me.MdiChildren
+            frm.Close()
+        Next
+
+        Dim f As New frmReportAuthen
+        f.MdiParent = Me
+        f.WindowState = FormWindowState.Maximized
+        f.Show()
+    End Sub
 End Class
