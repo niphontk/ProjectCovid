@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5635E18A-9F58-4696-ACCE-8DC343B211FE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ProjectCovid.My.MyApplication</StartupObject>
+    <RootNamespace>ProjectCovid</RootNamespace>
+    <AssemblyName>ProjectCovid</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ProjectCovid.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ProjectCovid.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Debug\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="mysql.data, Version=5.0.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\mysql.data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="zxing, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>packages\ZXing.Net.0.16.6\lib\net461\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>packages\ZXing.Net.0.16.6\lib\net461\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="db.vb" />
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.vb">
+      <DependentUpon>frmAbout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAbout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAtk.Designer.vb">
+      <DependentUpon>frmAtk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAtk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGenQrCode.Designer.vb">
+      <DependentUpon>frmGenQrCode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGenQrCode.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMedicalCer.Designer.vb">
+      <DependentUpon>frmMedicalCer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMedicalCer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMulti.Designer.vb">
+      <DependentUpon>frmMulti.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMulti.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportA4.Designer.vb">
+      <DependentUpon>frmReportA4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportA4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportATK.Designer.vb">
+      <DependentUpon>frmReportATK.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportATK.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportFIA.Designer.vb">
+      <DependentUpon>frmReportFIA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportFIA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportPCR.Designer.vb">
+      <DependentUpon>frmReportPCR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportPCR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScanQrcode.Designer.vb">
+      <DependentUpon>frmScanQrcode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmScanQrcode.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSendTest.Designer.vb">
+      <DependentUpon>frmSendTest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSendTest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStickerVial.Designer.vb">
+      <DependentUpon>frmStickerVial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmStickerVial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAtk.resx">
+      <DependentUpon>frmAtk.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGenQrCode.resx">
+      <DependentUpon>frmGenQrCode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMedicalCer.resx">
+      <DependentUpon>frmMedicalCer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMulti.resx">
+      <DependentUpon>frmMulti.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportA4.resx">
+      <DependentUpon>frmReportA4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportATK.resx">
+      <DependentUpon>frmReportATK.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportFIA.resx">
+      <DependentUpon>frmReportFIA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportPCR.resx">
+      <DependentUpon>frmReportPCR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScanQrcode.resx">
+      <DependentUpon>frmScanQrcode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSendTest.resx">
+      <DependentUpon>frmSendTest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStickerVial.resx">
+      <DependentUpon>frmStickerVial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\โลโก้ รพ.ตระการ-crop.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
