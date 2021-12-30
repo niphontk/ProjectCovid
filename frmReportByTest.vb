@@ -1,19 +1,35 @@
 ﻿Imports System.Drawing.Printing
 Imports System.Globalization
 Imports Microsoft.Office.Interop
-
-Public Class frmSendTest
+Public Class frmReportByTest
     Private _curCulture As System.Globalization.CultureInfo
 
-    Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
+    Private Sub frmReportByTest_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        DateTimePicker1.Value = Date.Now
 
+        Dim sqlSelect As DataTable = executesqlcommandhi("select labcode,labname from lab where labcode in ('634', '635', '636','904','863','887')")
+
+        Try
+            ComboBox1.DataSource = sqlSelect
+            ComboBox1.DisplayMember = "labname"
+            ComboBox1.ValueMember = "labcode"
+        Catch ex As Exception
+
+        End Try
     End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        If DataGridView1.Rows.Count > 0 Then
+            ExportExcel()
+        Else
+
+        End If
+    End Sub
     Sub ExportExcel()
         'https://kasem-mesak.blogspot.com/2016/05/vbnet-export-datagridview-to-excel.html
         _curCulture = System.Globalization.CultureInfo.GetCultureInfo("en-US") 'ภาษาไทย
         Dim pdate As String = DateTime.Now.ToString("yyyyMMddHHmmss")
-        Dim excelLocation As String = "C:\ExportLab\" & "report_PCR" & pdate & ".xlsx"
+        Dim excelLocation As String = "C:\ExportLab\" & "report_Test_" & pdate & ".xlsx"
         Dim xlApp As Excel.Application = New Microsoft.Office.Interop.Excel.Application()
         If xlApp Is Nothing Then
             MessageBox.Show("Excel is not Install.")
@@ -45,14 +61,6 @@ Public Class frmSendTest
         MsgBox("ส่งออกสำเร็จ จัดเก็บไฟล์ที่ " & excelLocation, MsgBoxStyle.Information, "ผลการส่งออก")
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        If DataGridView1.Rows.Count > 0 Then
-            ExportExcel()
-        Else
-
-        End If
-    End Sub
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If TextBox3.Text = "2524Trakan" Then
             Dim pStr As String = DateTimePicker1.Value.ToString("yyyy-MM-dd", New CultureInfo("en-US"))
@@ -69,7 +77,8 @@ Public Class frmSendTest
                                         p.lname as 'lname',
                                         p.engfname as 'name_eng',
                                         p.englname as 'lname_eng',
-                                        concat('\'','045481777') as 'telephone',
+                                        concat('\'',p.hometel) as 'telephone',
+                                        pttype.namepttype,
                                         concat('\'',p.addrpart) as 'address',
                                         '' as 'address_eng',
                                         concat('\'',((case LENGTH(p.ntnlty) when 2 then concat('0', p.ntnlty) end))) as 'nation',
@@ -80,53 +89,17 @@ Public Class frmSendTest
                                         '7' as 'scpeciment_type',
                                         concat('\'',o.hn) as hn,
                                         '' as lab_no,
-                                        concat('\'',DATE_FORMAT(l.senddate,'%Y/%m/%d '),TIME_FORMAT(l.sendtime * 100, '%H:%i')) as 'collection_date',                                        
+                                        concat('\'',DATE_FORMAT(l.senddate,'%Y/%m/%d '),TIME_FORMAT(l.sendtime * 100, '%H:%i')) as 'collection_date',    
                                         concat('\'','') as 'recieve_date',
                                         concat('\'',o.vn) as 'vn'
                                         FROM
 	                                        ovst o
                                         INNER JOIN pt p ON p.hn = o.hn
                                         INNER JOIN lbbk l ON l.vn = o.vn
+                                        INNER JOIN pttype on pttype.pttype=o.pttype
                                         WHERE
-	                                        l.labcode IN ('634', '635', '636','904')
-                                        and DATE(l.senddate) = '" & pStr & "'
-                                        and TIME_FORMAT(l.sendtime * 100, '%H:%i') between '" & TextBox1.Text & "' and '" & TextBox2.Text & "'
-UNION
-SELECT
-	                                        concat('\'',p.pop_id) AS 'cid',
-	                                        p.passport AS 'passport',
-	                                        concat('\'',DATE_FORMAT(p.brthdate, '%Y/%m/%d')) AS birth,
-                                        concat('\'',(CASE p.male WHEN 1 THEN IF( p.mrtlst < 6, IF( DATE_FORMAT( NOW( ) , '%Y' ) - DATE_FORMAT( p.brthdate, '%Y' ) - ( DATE_FORMAT( NOW( ) , '00-%m-%d' ) < DATE_FORMAT( p.brthdate, '00-%m-%d' ) ) < 15, '1','3' ),
-                                        IF( DATE_FORMAT( NOW( ) , '%Y' ) - DATE_FORMAT( p.brthdate, '%Y' ) - ( DATE_FORMAT( NOW( ) , '00-%m-%d' ) < DATE_FORMAT( p.brthdate, '00-%m-%d' ) ) < 20, '368', '376' )
-                                        ) WHEN 2 THEN IF( p.mrtlst = 1,
-                                        IF( DATE_FORMAT( NOW( ) , '%Y' ) - DATE_FORMAT( p.brthdate, '%Y' ) - ( DATE_FORMAT( NOW( ) , '00-%m-%d' ) < DATE_FORMAT( p.brthdate, '00-%m-%d' ) ) < 15, '2', '4' ),
-                                        IF( p.mrtlst < 6, '5', '408' )) END)) AS pre_name,
-                                        p.fname as 'name',
-                                        p.lname as 'lname',
-                                        p.engfname as 'name_eng',
-                                        p.englname as 'lname_eng',
-                                        concat('\'','045481777') as 'telephone',
-                                        concat('\'',p.addrpart) as 'address',
-                                        '' as 'address_eng',
-                                        concat('\'',((case LENGTH(p.ntnlty) when 2 then concat('0', p.ntnlty) end))) as 'nation',
-                                        concat('\'',p.chwpart) as 'province',
-                                        concat('\'',(CONCAT(p.chwpart,p.amppart))) as 'district',
-                                        concat('\'',(CONCAT(p.chwpart,p.amppart,p.tmbpart))) as 'sub-district',
-                                        concat('\'','2') as 'objective',
-                                        '7' as 'scpeciment_type',
-                                        concat('\'',i.hn) as hn,
-                                        '' as lab_no,
-                                        concat('\'',DATE_FORMAT(l.senddate,'%Y/%m/%d '),TIME_FORMAT(l.sendtime * 100, '%H:%i')) as 'collection_date',                                        
-                                        concat('\'','') as 'recieve_date',
-                                        concat('\'',i.vn) as 'vn'
-                                        FROM
-	                                        ipt i
-                                        INNER JOIN pt p ON p.hn = i.hn
-                                        INNER JOIN lbbk l ON l.vn = i.vn
-                                        WHERE
-	                                        l.labcode IN ('634', '635', '636','904')
-                                        and DATE(l.senddate) = '" & pStr & "'
-                                        and TIME_FORMAT(l.sendtime * 100, '%H:%i') between '" & TextBox1.Text & "' and '" & TextBox2.Text & "'")
+	                                        l.labcode = '" & ComboBox1.SelectedValue & "'
+                                        and DATE(l.senddate) = '" & pStr & "'")
             If sqlSearch.Rows.Count > 0 Then
                 DataGridView1.DataSource = sqlSearch
             End If
@@ -134,9 +107,5 @@ SELECT
             MsgBox("รหัสผ่านไม่ถูกต้อง", vbCritical, "ผิดพลาด")
             Exit Sub
         End If
-    End Sub
-
-    Private Sub frmSendTest_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        DateTimePicker1.Value = Date.Now
     End Sub
 End Class

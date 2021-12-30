@@ -57,7 +57,7 @@ Partial Class frmAbout
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmAbout"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmAbout"
+        Me.Text = "ทีมพัฒนา"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

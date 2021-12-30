@@ -111,6 +111,18 @@
     <Compile Include="frmAtk.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmAuthenCode.Designer.vb">
+      <DependentUpon>frmAuthenCode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAuthenCode.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAuthenMain.Designer.vb">
+      <DependentUpon>frmAuthenMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAuthenMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmGenQrCode.Designer.vb">
       <DependentUpon>frmGenQrCode.vb</DependentUpon>
     </Compile>
@@ -135,6 +147,12 @@
     <Compile Include="frmMulti.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmPhone.Designer.vb">
+      <DependentUpon>frmPhone.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPhone.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmReportA4.Designer.vb">
       <DependentUpon>frmReportA4.vb</DependentUpon>
     </Compile>
@@ -147,10 +165,22 @@
     <Compile Include="frmReportATK.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmReportATKFIAPCR.Designer.vb">
+      <DependentUpon>frmReportATKFIAPCR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportATKFIAPCR.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmReportAuthen.Designer.vb">
       <DependentUpon>frmReportAuthen.vb</DependentUpon>
     </Compile>
     <Compile Include="frmReportAuthen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportByTest.Designer.vb">
+      <DependentUpon>frmReportByTest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportByTest.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmReportFIA.Designer.vb">
@@ -210,6 +240,12 @@
     <EmbeddedResource Include="frmAtk.resx">
       <DependentUpon>frmAtk.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAuthenCode.resx">
+      <DependentUpon>frmAuthenCode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAuthenMain.resx">
+      <DependentUpon>frmAuthenMain.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGenQrCode.resx">
       <DependentUpon>frmGenQrCode.vb</DependentUpon>
     </EmbeddedResource>
@@ -222,14 +258,23 @@
     <EmbeddedResource Include="frmMulti.resx">
       <DependentUpon>frmMulti.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPhone.resx">
+      <DependentUpon>frmPhone.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmReportA4.resx">
       <DependentUpon>frmReportA4.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReportATK.resx">
       <DependentUpon>frmReportATK.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReportATKFIAPCR.resx">
+      <DependentUpon>frmReportATKFIAPCR.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmReportAuthen.resx">
       <DependentUpon>frmReportAuthen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportByTest.resx">
+      <DependentUpon>frmReportByTest.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReportFIA.resx">
       <DependentUpon>frmReportFIA.vb</DependentUpon>

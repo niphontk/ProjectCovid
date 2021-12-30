@@ -45,6 +45,7 @@ Partial Class frmMain
         Me.พมพใยสรปรวมToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.พมพใบรบรองแพทยToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ผพฒนาToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.รายงานการตรวจแยกTestToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -111,8 +112,8 @@ Partial Class frmMain
         '
         Me.รายงานหองLabToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.รายงานการสงตรวจATKToolStripMenuItem, Me.รายงานการสงตรวจPCRToolStripMenuItem})
         Me.รายงานหองLabToolStripMenuItem.Name = "รายงานหองLabToolStripMenuItem"
-        Me.รายงานหองLabToolStripMenuItem.Size = New System.Drawing.Size(89, 20)
-        Me.รายงานหองLabToolStripMenuItem.Text = "รายงานห้องLab"
+        Me.รายงานหองLabToolStripMenuItem.Size = New System.Drawing.Size(72, 20)
+        Me.รายงานหองLabToolStripMenuItem.Text = "ส่ง Co-Lab"
         '
         'รายงานการสงตรวจATKToolStripMenuItem
         '
@@ -128,7 +129,7 @@ Partial Class frmMain
         '
         'รายงานศนยPCRToolStripMenuItem
         '
-        Me.รายงานศนยPCRToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.รายงานการตรวจPCRToolStripMenuItem})
+        Me.รายงานศนยPCRToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.รายงานการตรวจPCRToolStripMenuItem, Me.รายงานการตรวจแยกTestToolStripMenuItem})
         Me.รายงานศนยPCRToolStripMenuItem.Name = "รายงานศนยPCRToolStripMenuItem"
         Me.รายงานศนยPCRToolStripMenuItem.Size = New System.Drawing.Size(97, 20)
         Me.รายงานศนยPCRToolStripMenuItem.Text = "รายงานศูนย์ PCR"
@@ -195,6 +196,12 @@ Partial Class frmMain
         Me.ผพฒนาToolStripMenuItem.Size = New System.Drawing.Size(56, 20)
         Me.ผพฒนาToolStripMenuItem.Text = "ผู้พัฒนา"
         '
+        'รายงานการตรวจแยกTestToolStripMenuItem
+        '
+        Me.รายงานการตรวจแยกTestToolStripMenuItem.Name = "รายงานการตรวจแยกTestToolStripMenuItem"
+        Me.รายงานการตรวจแยกTestToolStripMenuItem.Size = New System.Drawing.Size(215, 22)
+        Me.รายงานการตรวจแยกTestToolStripMenuItem.Text = "รายงานการตรวจแยก Test"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -205,7 +212,8 @@ Partial Class frmMain
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "ProjectCovid"
+        Me.Text = "ProjectCovid : พัฒนาโดยนายนิพนธ์  เทียนหอม  ตำแหน่ง นักวิชาการคอมพิวเตอร์ ปฏิบัติ" &
+    "การ  โรงพยาบาลตระการพืชผล โทร 0628265541"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
@@ -236,4 +244,5 @@ Partial Class frmMain
     Friend WithEvents ขอAuthenCodeเทานนToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ขอAuthenCodeลงทะเบยนToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ตรวจสอบAuthenCodeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents รายงานการตรวจแยกTestToolStripMenuItem As ToolStripMenuItem
 End Class
